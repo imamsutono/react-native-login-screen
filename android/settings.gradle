@@ -1,0 +1,3 @@
+rootProject.name = 'ReactNativeLoginScreen'
+
+include ':app'
