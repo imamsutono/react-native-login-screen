@@ -13,17 +13,19 @@ import styles from './styles';
 
 class Login extends Component {
   render() {
+    const { container, logoContainer, tagline, row, inputText, loginButton, loginLabel } = styles;
+
     return (
-      <KeyboardAvoidingView behavior="padding" style={styles.container}>
+      <KeyboardAvoidingView behavior="padding" style={container}>
         <StatusBar barStyle="light-content" />
-        <View style={styles.logoContainer}>
+        <View style={logoContainer}>
           <Image
             source={require('../../images/icon.png')}
             style={{ height: 100, width: 100 }}
           />
-          <Text style={styles.tagline}>{this.props.tagline}</Text>
+          <Text style={tagline}>{this.props.tagline}</Text>
         </View>
-        <View style={styles.row}>
+        <View style={row}>
           <TextInput
             placeholder="Username or Email"
             placeholderTextColor="rgba(255,255,255,0.5)"
@@ -33,25 +35,25 @@ class Login extends Component {
             autoCapitalize="none"
             autoCorrect={false}
             underlineColorAndroid="transparent"
-            style={styles.inputText}
+            style={inputText}
           />
         </View>
-        <View style={styles.row}>
+        <View style={row}>
           <TextInput
             placeholder="Password"
             placeholderTextColor="rgba(255,255,255,0.5)"
             returnKeyType="go"
             secureTextEntry={true}
-            style={styles.inputText}
+            style={inputText}
             ref={input => (this.passwordInput = input)}
           />
         </View>
-        <View style={styles.row}>
+        <View style={row}>
           <TouchableOpacity
-            style={styles.loginButton}
+            style={loginButton}
             onPress={() => {}}
           >
-            <Text style={styles.loginLabel}>LOGIN</Text>
+            <Text style={loginLabel}>LOGIN</Text>
           </TouchableOpacity>
         </View>
       </KeyboardAvoidingView>
