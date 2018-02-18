@@ -17,7 +17,7 @@ class Login extends Component {
 
     return (
       <KeyboardAvoidingView behavior="padding" style={container}>
-        <StatusBar barStyle="light-content" />
+        <StatusBar backgroundColor="aliceblue" barStyle="light-content" />
         <View style={logoContainer}>
           <Image
             source={require('../../images/icon.png')}
