@@ -8,14 +8,24 @@ const styles = StyleSheet.create({
   },
   logoContainer: {
     alignItems: 'center',
-    flexGrow: 1,
+    flex: 1,
     justifyContent: 'center'
+  },
+  logoContainerCenter: {
+    alignItems: 'center',
+    flex: 1,
+    justifyContent: 'flex-end',
+    marginBottom: 16
   },
   tagline: {
     color: 'rgba(255,255,255,0.6)',
     marginTop: 8,
     textAlign: 'center',
     fontSize: 24
+  },
+  formCenter: {
+    flex: 1, 
+    justifyContent: 'flex-start'
   },
   row: {
     height: 48,
