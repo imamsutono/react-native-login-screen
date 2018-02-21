@@ -10,15 +10,26 @@ import {
   StatusBar
 } from "react-native";
 import styles from './styles';
+import * as theme from '../../config/theme';
 
 class Login extends Component {
   render() {
-    const { container, logoContainer, logoContainerCenter, tagline, formCenter, row, inputText, loginButton, loginLabel } = styles;
+    const { 
+      container, 
+      logoContainer, 
+      logoContainerCenter, 
+      tagline, 
+      formCenter, 
+      row, 
+      inputText, 
+      loginButton, 
+      loginLabel
+    } = styles({ screenTheme: this.props.theme });
     const formPosition = this.props.formPosition;
 
     return (
       <KeyboardAvoidingView behavior="padding" style={container}>
-        <StatusBar translucent={true} barStyle="light-content" />
+        <StatusBar barStyle="light-content" />
         <View style={formPosition === 'center' ? logoContainerCenter : logoContainer}>
           <Image
             source={require('../../images/icon.png')}
@@ -30,7 +41,7 @@ class Login extends Component {
           <View style={row}>
             <TextInput
               placeholder="Username or Email"
-              placeholderTextColor="rgba(255,255,255,0.5)"
+              placeholderTextColor={theme[this.props.theme].clrPlaceholder}
               returnKeyType="next"
               onSubmitEditing={() => this.passwordInput.focus()}
               keyboardType="email-address"
@@ -43,7 +54,7 @@ class Login extends Component {
           <View style={row}>
             <TextInput
               placeholder="Password"
-              placeholderTextColor="rgba(255,255,255,0.5)"
+              placeholderTextColor={theme[this.props.theme].clrPlaceholder}
               returnKeyType="go"
               secureTextEntry={true}
               style={inputText}

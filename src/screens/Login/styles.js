@@ -1,10 +1,11 @@
 import { StyleSheet } from 'react-native';
+import * as theme from '../../config/theme';
 
-const styles = StyleSheet.create({
+const styles = ({ screenTheme }) => StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: '#42A5F5'
+    backgroundColor: theme[screenTheme].bgScreen
   },
   logoContainer: {
     alignItems: 'center',
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
     marginBottom: 8
   },
   inputText: {
-    backgroundColor: '#64B5F6',
+    backgroundColor: theme[screenTheme].bgInput,
     color: '#FFF',
     padding: 8,
     flex: 1
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
     marginTop: 8
   },
   loginLabel: {
-    color: '#1E88E5',
+    color: theme[screenTheme].clrLabel,
     textAlign: 'center',
     fontSize: 18,
     fontWeight: '600'
