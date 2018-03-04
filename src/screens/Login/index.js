@@ -14,6 +14,7 @@ import * as theme from '../../config/theme';
 
 class Login extends Component {
   render() {
+    const themeProps = this.props.theme;
     const { 
       container, 
       logoContainer, 
@@ -24,7 +25,7 @@ class Login extends Component {
       inputText, 
       loginButton, 
       loginLabel
-    } = styles({ screenTheme: this.props.theme });
+    } = styles({ screenTheme: themeProps });
     const formPosition = this.props.formPosition;
 
     return (
@@ -41,7 +42,7 @@ class Login extends Component {
           <View style={row}>
             <TextInput
               placeholder="Username or Email"
-              placeholderTextColor={theme[this.props.theme].clrPlaceholder}
+              placeholderTextColor={theme[themeProps].clrPlaceholder}
               returnKeyType="next"
               onSubmitEditing={() => this.passwordInput.focus()}
               keyboardType="email-address"
@@ -54,7 +55,7 @@ class Login extends Component {
           <View style={row}>
             <TextInput
               placeholder="Password"
-              placeholderTextColor={theme[this.props.theme].clrPlaceholder}
+              placeholderTextColor={theme[themeProps].clrPlaceholder}
               returnKeyType="go"
               secureTextEntry={true}
               style={inputText}
