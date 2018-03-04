@@ -19,4 +19,11 @@ const red = {
   clrPlaceholder: '#FFD0B0'
 };
 
-export { blue, green, yellow, red };
+const choco = {
+  bgScreen: '#795548',
+  bgInput: '#A1887F',
+  clrLabel: '#260E04',
+  clrPlaceholder: '#EFDCD5'
+};
+
+export { blue, green, red, choco };
