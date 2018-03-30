@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 import {
   StyleSheet,
   View,
@@ -75,5 +76,11 @@ class Login extends Component {
     );
   }
 }
+
+Login.propTypes = {
+  tagline: PropTypes.string.isRequired,
+  formPosition: PropTypes.string,
+  theme: PropTypes.string
+};
 
 export default Login;
