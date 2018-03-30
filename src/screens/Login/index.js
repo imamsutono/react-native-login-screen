@@ -27,7 +27,7 @@ class Login extends Component {
       loginButton, 
       loginLabel
     } = styles({ screenTheme: themeProps });
-    const formPosition = this.props.formPosition;
+    const { formPosition, onSubmitLogin } = this.props;
 
     return (
       <KeyboardAvoidingView behavior="padding" style={container}>
@@ -66,7 +66,7 @@ class Login extends Component {
           <View style={row}>
             <TouchableOpacity
               style={loginButton}
-              onPress={() => {}}
+              onPress={onSubmitLogin}
             >
               <Text style={loginLabel}>LOGIN</Text>
             </TouchableOpacity>
@@ -80,7 +80,8 @@ class Login extends Component {
 Login.propTypes = {
   tagline: PropTypes.string.isRequired,
   formPosition: PropTypes.string,
-  theme: PropTypes.string
+  theme: PropTypes.string,
+  onSubmitLogin: PropTypes.func
 };
 
 export default Login;

@@ -6,6 +6,7 @@ const App = () => (
     tagline="We Found Property For Your Needs"
     formPosition="center"
     theme="choco"
+    onSubmitLogin={() => {}}
   />
 );
 
